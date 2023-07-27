@@ -7,4 +7,9 @@
         <UseWPF>true</UseWPF>
     </PropertyGroup>
 
+    <ItemGroup>
+      <None Remove="juggling.png" />
+      <Resource Include="juggling.png" />
+    </ItemGroup>
+
 </Project>

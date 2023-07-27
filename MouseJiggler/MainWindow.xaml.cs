@@ -1,18 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using MouseJiggler;
 
 namespace MouseJiggler
 {
@@ -36,23 +25,29 @@ namespace MouseJiggler
             Console.WriteLine("Stop Jiggling");
             return;
         }
-
+        /// <summary>
+        /// This is a decorator that keeps track of the initial 
+        /// </summary>
         private async Task MouseJiggler()
         {
-            int offsetX = 1;
-            int offsetY = 1;
-            Point currentPosition = Mouse.GetPosition(this); 
-            int newX = (int)currentPosition.X + offsetX;
-            int newY = (int)currentPosition.Y + offsetY;
+            double offsetX = 1;
+            double offsetY = 1;
+            Point currentPosition = NativeMethods.GetCursorPosition();
+
+            double newX = currentPosition.X + offsetX;
+            double newY = currentPosition.Y + offsetY;
             
             while (CheckBoxJiggle.IsChecked == true)
             {
-               var cursorMoved = NativeMethods.SetCursorPosition(newX, newY);
+               var cursorMoved = NativeMethods.SetCursorPosition((int)newX, (int)newY);
+               
                 await  Task.Delay(2500);
+                
                 offsetX = offsetX * -1;
                 offsetY = offsetY * -1;
-                 newX = (int)currentPosition.X + offsetX;
-                 newY = (int)currentPosition.Y + offsetY;
+                
+                 newX =currentPosition.X + offsetX;
+                 newY = currentPosition.Y + offsetY;
             }
         }
     }
