@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MouseJiggler"
         mc:Ignorable="d"
-        Title="Mouse Jiggler" Height="150" Width="300">
+        Title="Mouse Jiggler" Height="150" Width="300"
+        Icon="/juggling.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>

@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:MouseJiggler"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <BitmapImage x:Key="AppIcon" UriSource="/MouseJiggler;component/juggling.png"/>
     </Application.Resources>
 </Application>
