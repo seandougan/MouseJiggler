@@ -34,10 +34,13 @@
             HorizontalAlignment="Left"
            />
         <CheckBox
+            x:Name="CheckBoxJiggle"
             Grid.Row="2"
             Grid.Column="2"
             Content="Jiggling" 
             VerticalAlignment="Bottom"
-            HorizontalAlignment="Left"/>
+            HorizontalAlignment="Left"
+            Checked="CheckBox_Checked"
+            Unchecked="CheckBox_Unchecked"/>
     </Grid>
 </Window>
