@@ -5,11 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MouseJiggler"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Mouse Jiggler" Height="150" Width="300">
     <Grid>
-        <Label>Toggle Mouse</Label>
-        <CheckBox></CheckBox>
-        
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <TextBlock 
+            Grid.Row="1" 
+            Grid.Column="1"
+            FontSize="25"
+            Text="Mouse Jiggler"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Margin="20 20 20 20"/>  
+        <Label
+            Grid.Row="2"
+            Grid.Column="1"
+            Content="Toggle Checkbox to Jiggle"
+            HorizontalAlignment="Left"
+           />
+        <CheckBox
+            Grid.Row="2"
+            Grid.Column="2"
+            Content="Jiggling" 
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"/>
     </Grid>
 </Window>
